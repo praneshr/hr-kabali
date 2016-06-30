@@ -1,0 +1,58 @@
+{
+  "name": "hr-kabali",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praneshr/hr-kabali.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praneshr/hr-kabali/issues"
+  },
+  "homepage": "https://github.com/praneshr/hr-kabali#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "body-parser": "^1.15.2",
+    "config": "^1.21.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "css-loader": "^0.23.1",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "glob": "^7.0.5",
+    "jquery": "^3.0.0",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.13.1",
+    "moment": "^2.13.0",
+    "node-sass": "^3.8.0",
+    "page": "^1.7.1",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "path": "^0.12.7",
+    "postcss": "^5.0.21",
+    "postcss-loader": "^0.9.1",
+    "react": "^15.1.0",
+    "react-datepicker": "^0.27.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "request": "^2.72.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}

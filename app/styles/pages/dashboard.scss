@@ -1,0 +1,26 @@
+.dashboard {
+  .banner {
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+    padding: 100px 0;
+  }
+  .section-selector {
+    .selections {
+      height: 300px;
+      border-radius: 16px;
+    }
+    .goals {
+      background-color: $pink400;
+    }
+    .feedbacks {
+      background-color: $cyan400;
+    }
+    .mentoring {
+      background-color: $green400;
+    }
+    .self-assessment {
+      background-color: $brown400;
+    }
+  }
+}

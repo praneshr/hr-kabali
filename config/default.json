@@ -1,0 +1,9 @@
+{
+  "host": "localhost",
+  "port": 8080,
+  "googleAuth": {
+    "googleClientID": "1034591131101-39sa4jpo90rpovi89efgvgge2655qao9.apps.googleusercontent.com",
+    "googleClientSecret": "Kkkuu7cSNjxkQACUTxSoZa-6",
+    "callbackUrl": "auth/callback"
+  }
+}
