@@ -50,8 +50,8 @@ export default class Reviewee extends React.Component {
         <table>
           <thead>
             <tr>
-              <th>Reviewee</th>
-              <th># of Goals</th>
+              <th>Reviewee Name</th>
+              <th>No. of Goals</th>
             </tr>
           </thead>
           <tbody>

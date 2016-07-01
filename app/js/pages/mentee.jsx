@@ -28,7 +28,7 @@ export default class Mentee extends React.Component {
           <thead>
             <tr>
               <th>
-                Mentee
+                Mentee Name
               </th>
             </tr>
           </thead>

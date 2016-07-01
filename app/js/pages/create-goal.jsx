@@ -52,12 +52,13 @@ export default class CreateGoal extends React.Component {
     })
     return (
       <div className="create-goal">
-        <div className="row">
-          <div className="col-sm-6">
-            <h1 className="page-title">Create Goal</h1>
-          </div>
-        </div>
+        <h1 className="page-title" style={{textAlign: 'center'}}>Create Goal</h1>
         <div className="form">
+          <div className="section">
+            <span className="value">
+              <textarea name="goal" ref="goalInput" cols="30" rows="10" placeholder="Enter your goal..."/>
+            </span>
+          </div>
           <div className="section">
             <label>Start Date</label>
             <span className="value">
@@ -79,11 +80,6 @@ export default class CreateGoal extends React.Component {
             </span>
           </div>
           <div className="section">
-            <span className="value">
-              <textarea name="goal" ref="goalInput" cols="30" rows="10" placeholder="Enter your goal..."/>
-            </span>
-          </div>
-          <div className="section">
             <label>Reviewer</label>
             <span className="value">
               <select ref="reviewer">
@@ -99,8 +95,10 @@ export default class CreateGoal extends React.Component {
               </select>
             </span>
           </div>
+          <div className="button-container">
+            <button onClick={this.submitGoal} style={{width: '100%', marginTop: 40}}>Add</button>
+          </div>
         </div>
-        <button onClick={this.submitGoal}>Add</button>
       </div>
     );
   }

@@ -40,10 +40,10 @@ export default class Goals extends React.Component {
         <table>
           <thead>
             <tr>
-              <th>Goal</th>
-              <th>Start Date</th>
-              <th>End Date</th>
-              <th>Reviewer</th>
+              <th id="table-goal">Goal</th>
+              <th className="date-email">Start Date</th>
+              <th className="date-email">End Date</th>
+              <th className="date-email">Reviewer</th>
             </tr>
           </thead>
           <tbody>
