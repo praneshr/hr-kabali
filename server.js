@@ -55,14 +55,19 @@ app.get('/auth/callback', passport.authenticate('google', { failureRedirect: '/l
 
 app.get('/authuser', ensureAuthenticated, function(req, res){
   const validEmail = req.user && req.user.emails[0].value.split('@')[1] === 'indix.com'
-  if(validEmail)
-    res.redirect('/');
-  else
+  if(validEmail) {
+    request(`http://${config.remote.host}/${req.user.emails[0].value}/employee`, (e,r,t) => {
+      const response = JSON.parse(t)
+      if(response.status === true)
+        res.redirect('/')
+      else
+        res.redirect('/unauth')
+    })
+  } else
     res.redirect('/unauth')
 })
 
 app.get('/login', function(req, res){
-  console.log(__dirname)
   const file = path.join(path.resolve(path.dirname(), 'views', 'login.html'));
   res.sendFile(file);
 });
@@ -79,6 +84,48 @@ app.get('/unauth', function(req, res){
 
 app.get('/user', ensureAuthenticated, (req, res) => {
   res.json(req.session.passport.user)
+})
+
+app.get('/user/all', ensureAuthenticated, (req, res) => {
+  request.get(`http://${config.remote.host}/employees`, (a,r,t) => {
+    res.json(JSON.parse(t))
+  })
+})
+
+app.get('/reviewee', ensureAuthenticated, (req, res) => {
+  const mail = req.session.passport.user.emails[0].value
+  request(`http://${config.remote.host}/${mail}/reviewees`, (a,s,t) => {
+    res.json(JSON.parse(t))
+  })
+})
+
+
+app.post('/goals', ensureAuthenticated, (req, res) => {
+  const body = req.body
+  const mail = req.session.passport.user.emails[0].value
+  request.post({
+    url:`http://${config.remote.host}/${mail}/goal/add`, form: body.goal
+  }, (err, httpResponse, body) => {
+    const response = JSON.parse(body)
+    if(response.status === true)
+      res.status(200).end()
+    else
+      res.status(500).end()
+  })
+})
+
+app.get('/goals', ensureAuthenticated, (req, res) => {
+  const mail = req.query.email || req.session.passport.user.emails[0].value
+  request(`http://${config.remote.host}/${mail}/goals`, (a,s,t) => {
+    res.json(JSON.parse(t))
+  })
+})
+
+app.get('/mentee', ensureAuthenticated, (req, res) => {
+  const mail = req.session.passport.user.emails[0].value
+  request(`http://${config.remote.host}/${mail}/mentees`, (a,s,t) => {
+    res.json(JSON.parse(t))
+  })
 })
 
 app.get('/', ensureAuthenticated, function(req, res){

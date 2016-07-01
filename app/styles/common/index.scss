@@ -5,6 +5,68 @@ body {
   color: $font-color;
 }
 .main-content {
-  margin-top: 60px;
+  margin-top: 80px;
   padding: 20px;
+}
+
+.page-title{
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: 8px;
+  min-width: 120px;
+  box-shadow: 0 0 20px rgba($primary-color, 0.4);
+}
+.primary-action {
+  text-align: right;
+}
+input[type='text'] {
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid $grey300;
+  background-color: $white;
+}
+.form {
+  width: 301px;
+  margin-top: 50px;
+  .section {
+    margin-bottom: 30px;
+  }
+  label{
+    width: 120px;
+    font-weight: normal;
+  }
+}
+textarea {
+  border: 1px solid $grey300;
+  width: 300px;
+  resize: none;
+  padding: 7px;
+}
+
+table{
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  tr{
+    background-color: $white;
+  }
+  td, th{
+    padding: 20px;
+  }
+  th {
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid $grey300;
+  }
+  td{
+    border-bottom: 1px solid $grey200;
+  }
 }

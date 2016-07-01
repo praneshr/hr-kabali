@@ -1,6 +1,8 @@
 import dashboard from '../pages/dashboard'
 import goals from '../pages/goals'
 import createGoal from '../pages/create-goal'
+import reviewee from '../pages/reviewee'
+import mentee from '../pages/mentee'
 
 const renderConfig = {
   dashboard: {
@@ -11,6 +13,12 @@ const renderConfig = {
   },
   goalCreate: {
     component: createGoal,
+  },
+  reviewee: {
+    component: reviewee,
+  },
+  mentee: {
+    component: mentee,
   }
 }
 

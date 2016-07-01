@@ -10,9 +10,9 @@
 .cs-loader-inner {
   transform: translateY(-50%);
   top: 50%;
+  width: 100%;
   position: absolute;
-  width: calc(100% - 200px);
-  color: #00E676;
+  color: $primary-color;
   padding: 0 100px;
   text-align: center;
 }

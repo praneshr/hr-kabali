@@ -23,4 +23,13 @@
       background-color: $brown400;
     }
   }
+  .img{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    img{
+      width: 150px;
+      margin-top: 50px;
+    }
+  }
 }

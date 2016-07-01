@@ -20,6 +20,3 @@ export default class MyComponent extends React.Component {
     );
   }
 }
-
-.propTypes = {
-};

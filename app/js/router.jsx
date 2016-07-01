@@ -18,14 +18,23 @@ page('/dashboard', (context) => {
   renderLayout({ context, page: 'dashboard' })
 })
 
-page('/goals', (context) => {
-  console.log('inside');
-  renderLayout({ context, page: 'goals' })
-})
-
 page('/goals/create', (context) => {
   renderLayout({ context, page: 'goalCreate' })
 })
+
+page('/goals/:email?', (context) => {
+  renderLayout({ context, page: 'goals', email: context.params.email })
+})
+
+
+page('/reviewee', (context) => {
+  renderLayout({ context, page: 'reviewee' })
+})
+
+page('/mentee', (context) => {
+  renderLayout({ context, page: 'mentee'})
+})
+
 page('*', (context) => {
   console.log(context);
 })

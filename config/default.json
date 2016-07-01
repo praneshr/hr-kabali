@@ -5,5 +5,8 @@
     "googleClientID": "1034591131101-39sa4jpo90rpovi89efgvgge2655qao9.apps.googleusercontent.com",
     "googleClientSecret": "Kkkuu7cSNjxkQACUTxSoZa-6",
     "callbackUrl": "auth/callback"
+  },
+  "remote": {
+    "host": "192.168.0.46:8080"
   }
 }

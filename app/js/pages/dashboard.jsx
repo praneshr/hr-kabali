@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import _ from "lodash"
 
 export default class Dashboard extends React.Component {
   constructor(props) {
@@ -6,6 +7,8 @@ export default class Dashboard extends React.Component {
   }
 
   render() {
+    if (_.isEmpty(this.props.store.user))
+      return false
     const firstName = this.props.store.user.name.givenName
     return (
       <div className="dashboard">
@@ -18,17 +21,37 @@ export default class Dashboard extends React.Component {
           <div className="row section-selector">
             <div className="col-lg-3 col-md-6 col-md-12">
               <a href="goals">
-                <div className="selections goals"></div>
+                <div className="selections goals">
+                  <div className="img">
+                    <img src="/img/goals.svg" alt=""/>
+                  </div>
+                </div>
               </a>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
-              <div className="selections feedbacks"></div>
+              <div className="selections feedbacks">
+              <div className="img">
+                <img src="/img/feedback.svg" alt=""/>
+              </div>
+              </div>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
-              <div className="selections mentoring"></div>
+              <div className="selections mentoring">
+                <a href="reviewee">
+                  <div className="img">
+                    <img src="/img/reviewee.svg" alt=""/>
+                  </div>
+                </a>
+              </div>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
-              <div className="selections self-assessment"></div>
+              <div className="selections self-assessment">
+                <a href="mentee">
+                  <div className="img">
+                    <img src="/img/mentee.svg" alt=""/>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
