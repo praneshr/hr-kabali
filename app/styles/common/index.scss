@@ -94,3 +94,57 @@ select{
   width: 180px;
   border: 1px solid $grey300;
 }
+
+.old{
+  background-color: $red400;
+  color: $white;
+  padding: 5px;
+  border-radius: 4px;
+}
+.future{
+  background-color: $green400;
+  color: $white;
+  padding: 5px;
+  border-radius: 4px;
+}
+.react-datepicker__day--selected{
+  background-color: $primary-color !important;
+}
+
+.logo{
+  img{
+    width: 100px;
+  }
+  &:after{
+    content: " ";
+    position: fixed;
+    width: 1px;
+    height: 30px;
+    background: black;
+    top: 17px;
+    left: 130px;
+  }
+}
+a{
+  &:hover,
+  &:focus,
+  &:visited{
+    text-decoration: none;
+    color: $font-color;
+  }
+}
+.logo-tag{
+  position: relative;
+  left: 30px;
+  // text-transform: uppercase;
+  top: 3px;
+  color: $font-color;
+  text-decoration: none;
+}
+
+.title{
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}

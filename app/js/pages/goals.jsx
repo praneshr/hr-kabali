@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import moment from 'moment'
 
 export default class Goals extends React.Component {
   constructor(props) {
@@ -15,10 +16,14 @@ export default class Goals extends React.Component {
     }
     const goals = this.props.store.goals
     const goalList = goals.map((goal) => {
+      const days = goal.enddate.split('-')
+      const endDate = moment(new Date(`${days[1]}-${days[0]}-${days[2]}`))
+      const today = moment()
+
       return <tr>
         <td>{goal.goal}</td>
         <td>{goal.startdate}</td>
-        <td>{goal.enddate}</td>
+        <td><span className={endDate.diff(today) < 0 ? 'old' : 'future'}>{goal.enddate}</span></td>
         <td>{goal.reviewer}</td>
       </tr>
     })

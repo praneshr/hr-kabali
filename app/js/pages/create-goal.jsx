@@ -91,6 +91,7 @@ export default class CreateGoal extends React.Component {
             <label>Mentor</label>
             <span className="value">
               <select ref="mentor">
+              <option value="none">none</option>
                 {userlist}
               </select>
             </span>

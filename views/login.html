@@ -2,11 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login | Kabali</title>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+    <style media="screen">
+    body{
+      position: fixed;
+      overflow: hidden;
+      font-family: 'Rubik', sans-serif;
+    }
+    .poster{
+      width: 80%;
+      background-color: #D1C4E9;
+      background-image: url(http://source.unsplash.com/1920x1080/daily);
+      height: 100%;
+      position: fixed;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+    .login{
+      position: fixed;
+      left: 80%;
+      width: 20%;
+      height: 100%;
+      top: 0;
+      background-color: #7E57C2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button{
+      background-color: #fff;
+      padding: 10px 15px;
+      border: none;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    img{
+      width: 20px;
+      margin-right: 15px;
+    }
+    a{
+      text-decoration: none;
+    }
+    a:hover,
+    a:visited,
+    a:focus{
+      text-decoration: none;
+    }
+    .title{
+      position: fixed;
+      top: 50px;
+      width: 20%;
+      text-align: center;
+      right: 0;
+      font-size: 50px;
+      font-weight: 100;
+      color: #fff;
+      /*opacity: 0.2;*/
+    }
+    </style>
   </head>
   <body>
-    <a href="/auth/google">
-      <button>Login with google</button>
-    </a>
+    <div class="poster">
+    </div>
+    <div class="login">
+      <div class="title">
+        iPerf
+      </div>
+      <a href="/auth/google">
+        <button>
+          <img src="https://www.seeklogo.net/wp-content/uploads/2015/09/new-google-favicon-logo.png" alt="">
+          Login with google
+        </button>
+      </a>
+    </div>
   </body>
 </html>

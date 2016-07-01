@@ -27,12 +27,18 @@ export default class Dashboard extends React.Component {
                   </div>
                 </div>
               </a>
+              <div className="title">
+                Goals
+              </div>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
               <div className="selections feedbacks">
               <div className="img">
                 <img src="/img/feedback.svg" alt=""/>
               </div>
+              </div>
+              <div className="title">
+                Feedback
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
@@ -43,6 +49,9 @@ export default class Dashboard extends React.Component {
                   </div>
                 </a>
               </div>
+              <div className="title">
+                Reviewees
+              </div>
             </div>
             <div className="col-lg-3 col-md-6 col-md-12">
               <div className="selections self-assessment">
@@ -51,6 +60,9 @@ export default class Dashboard extends React.Component {
                     <img src="/img/mentee.svg" alt=""/>
                   </div>
                 </a>
+              </div>
+              <div className="title">
+                Mentees
               </div>
             </div>
           </div>
